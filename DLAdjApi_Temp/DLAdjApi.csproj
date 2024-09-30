@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>      
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <!--TargetLatestRuntimePatch>true</TargetLatestRuntimePatch-->
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\net6.0\Api.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\net6.0\Api.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    
+    <!--PackageReference Include="Microsoft.AspNetCore.App" Version="3.1.1" /-->
+    <!--PackageReference Include="Microsoft.AspNetCore.App" /-->
+    
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8" />     
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.8" />   
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.8" />  
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="2.2.0" /> 
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />   
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />   
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />  
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.2.0" />  
+    <!--PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" /-->
+
+    <!--PackageReference Include="MySql.Data.EntityFrameworkCore" Version="6.10.5" /-->    
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />    
+
+    <!--PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.7" PrivateAssets="All" /--> <!--產生 code -->
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="log4net.extensions.aspnetcore" Version="1.0.0" />   
+    <PackageReference Include="OpenCvSharp4.Windows" Version="4.2.0.20200208" />    
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />        
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" /-->
+    <!--DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" /-->    
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RsaJwt.Core\RsaJwk.Core.csproj" />    
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,1 @@
+dotnet publish --framework net6.0 --output "D:\DLAdjWebAPI_Release" --configuration Release  --version-suffix 4.3.11
